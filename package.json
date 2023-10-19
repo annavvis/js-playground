@@ -1,0 +1,9 @@
+{
+  "name": "test",
+  "scripts": {
+    "dev": "tsc index.ts && node index.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
