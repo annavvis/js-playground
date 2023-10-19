@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "szkolka",
   "scripts": {
     "dev": "tsc index.ts && node index.js"
   },
