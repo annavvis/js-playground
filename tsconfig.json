@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "skipLibCheck": false
+    "skipLibCheck": false,
+    "strict": true
   }
 }

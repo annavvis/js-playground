@@ -38,19 +38,66 @@
 // mercedes.speed = 120
 // mercedes.drive()
 
-class Car {
-  #name
-  speed
-  constructor(name: string, speed: number) {
-    this.#name = name;
-    this.speed = speed;
-  }
-  drive(){
-    console.log(`${this.#name} drives with speed ${this.speed}`)
+// class Car {
+//   #name
+//   speed
+//   constructor(name: string, speed: number) {
+//     this.#name = name;
+//     this.speed = speed;
+//   }
+//   drive(){
+//     console.log(`${this.#name} drives with speed ${this.speed}`)
+//   }
+// }
+//
+// const bmw = new Car('bwm', 150)
+// console.log(bmw)
+// bmw.#name = 'bwmsuper'
+// console.log(bmw)
+
+
+interface Animal {
+  name: string,
+  fly(): void,
+  makeASound(): void
+}
+
+function fly(animal: Animal) {
+  animal.fly()
+}
+
+const kanarek : Animal = {
+  name: 'Zenek',
+  fly: function(){
+    console.log(`${this.name} is flying`)
+  },
+  makeASound(): void {
+    console.log(`${this.name} makes PiPiPi`)
   }
 }
 
-const bmw = new Car('bwm', 150)
-console.log(bmw)
-// bmw.#name = 'bwmsuper'
-// console.log(bmw)
+const kicia : Animal = {
+  fly(): void {
+    console.log(`${this.name} cannot fly!!!`)
+  },
+  name: 'Chrupka',
+  makeASound(): void {
+    console.log(`${this.name} makes Meow`)
+  }
+}
+const żółwik : Animal = {
+  fly(): void {
+    console.log(`${this.name} cannot fly!!!`)
+  },
+  name: 'JAnusz',
+  makeASound(): void {
+    console.log(`${this.name} is silent`)
+  }
+}
+
+function makeASound(animal: Animal) {
+  animal.makeASound()
+}
+
+makeASound(kicia)
+makeASound(żółwik)
